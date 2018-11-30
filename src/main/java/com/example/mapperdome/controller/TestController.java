@@ -1,5 +1,6 @@
 package com.example.mapperdome.controller;
 
+import com.example.mapperdome.service.MongodbTest;
 import com.example.mapperdome.service.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +19,9 @@ public class TestController {
     @Autowired
     private Test test;
 
+    @Autowired
+    private MongodbTest mongodbTest;
+
     @GetMapping(value = "/info")
     public Object get(){
         return test.foo();
@@ -31,5 +35,22 @@ public class TestController {
     @GetMapping(value = "/test")
     public Object test(){
         return test.foo3();
+    }
+
+    @GetMapping(value = "/add")
+    public Object add(){
+        return mongodbTest.add();
+    }
+    @GetMapping(value = "/del")
+    public Object del(){
+        return mongodbTest.del();
+    }
+    @GetMapping(value = "/up")
+    public Object up(){
+        return mongodbTest.up();
+    }
+    @GetMapping(value = "/query")
+    public Object query(){
+        return mongodbTest.query();
     }
 }

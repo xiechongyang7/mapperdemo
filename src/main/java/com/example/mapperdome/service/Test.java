@@ -1,9 +1,11 @@
 package com.example.mapperdome.service;
 
 import com.example.mapperdome.mapper.UserMapper;
+import com.example.mapperdome.model.People;
 import com.example.mapperdome.model.User;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,6 +21,8 @@ public class Test {
 
     @Autowired
     private UserMapper userMapper;
+    @Autowired
+    private MongoTemplate mongoTemplate;
 
     public List<User> foo(){
         return userMapper.selectAll();
@@ -34,4 +38,5 @@ public class Test {
         user.setId(Long.valueOf(7));
         return userMapper.select(user);
     }
+
 }

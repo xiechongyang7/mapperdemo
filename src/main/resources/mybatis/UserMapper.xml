@@ -11,7 +11,7 @@
     <result column="userName" jdbcType="VARCHAR" property="username" />
   </resultMap>
 
-  <update id="update1" parameterType="">
-    UPDATE ${homeaddress} SET userName =#{username} WHERE (id=#{id});
-  </update>
+  <!--<update id="update1" parameterType="">-->
+    <!--UPDATE ${homeaddress} SET userName =#{username} WHERE (id=#{id});-->
+  <!--</update>-->
 </mapper>

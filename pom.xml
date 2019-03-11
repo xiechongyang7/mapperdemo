@@ -75,7 +75,12 @@
             <artifactId>mapper</artifactId>
             <version>4.0.4</version>
         </dependency>
-
+        <!--druid -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.0.28</version>
+        </dependency>
     </dependencies>
 
     <build>

@@ -25,6 +25,11 @@ public class Test {
     private MongoTemplate mongoTemplate;
 
     public List<User> foo(){
+        User u = new User();
+        u.setUsername("四胖子");
+        u.setId(7L);
+        u.setHomeaddress("t_user");
+        userMapper.update1(u);
         return userMapper.selectAll();
     }
 

@@ -52,4 +52,6 @@ public class MongodbTest {
         People people = mongoTemplate.findOne(query, People.class);
         return people;
     }
+
+
 }
